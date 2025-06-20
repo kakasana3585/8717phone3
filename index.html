@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>전화 연결 중...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      background: #f0f4ff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+      text-align: center;
+    }
+    .box {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>📞 전화 연결 중...</h1>
+    <p>잠시만 기다려 주세요. <br>3초 후 자동으로 전화 연결이 시작됩니다.</p>
+  </div>
+
+  <script>
+    setTimeout(function() {
+      const encoded = "MDEwNDA1MDg3MTc=";
+      const decoded = atob(encoded);
+      window.location.href = "tel:" + decoded;
+    }, 3000);
+  </script>
+</body>
+</html>
